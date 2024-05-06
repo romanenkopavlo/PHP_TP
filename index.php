@@ -1,13 +1,38 @@
 <?php
+    require_once "GestionContacts.php";
+    $gestionContacts = new GestionContacts();
+?>
 
-require_once "Personne.php";
+<!DOCTYPE html>
+<html lang="fr">
+    <head>
+        <title>Le Titre</title>
+        <meta charset="utf-8">
+    </head>
 
-$personne = new Personne();
+    <body>
 
-$personne->setNom('DUPUIS');
-$personne->prenom = 'Franck';
-$personne->annee_naissance = 1974;
+        <header>
+            <div>
+                <h2>TD1_PHP_POO</h2>
+            </div>
+        </header>
 
-echo $personne->getNom().'<br>';
-echo $personne->prenom.'<br>';
-echo $personne->calculerAge().' ans';
+        <section>
+            <h3>Liste de contacts</h3>
+            <?php $gestionContacts->afficherContacts(); ?>
+            <h3>Ajouter un nouveau contact</h3>
+            <form action="index.php" method="GET">
+                <input type="text" name="nom" id="nom">
+                <label for="nom">Nom</label>
+                <input type="text" name="prenom" id="prenom">
+                <label for="prenom">Prenom</label>
+                <button type="submit">Ajouter</button>
+            </form>
+        </section>
+        <footer>
+            BTS CIEL LPO ASTIER 2024
+        </footer>
+
+    </body>
+</html>

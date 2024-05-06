@@ -1,14 +1,21 @@
 <?php
 
-class Personne
+class Contact
 {
     private $nom;
     public $prenom;
     public $annee_naissance;
 
-    public function __construct() {
-
+    /**
+     * @param $nom
+     * @param $prenom
+     */
+    public function __construct($nom, $prenom)
+    {
+        $this->nom = $nom;
+        $this->prenom = $prenom;
     }
+
     public function getNom() {
         return $this->nom;
     }
