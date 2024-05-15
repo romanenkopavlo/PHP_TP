@@ -79,7 +79,7 @@ class GestionContacts
     public function afficherContacts() {
         if (!empty($_POST)) {
             if (isset($_POST["nom"]) && isset($_POST["prenom"])) {
-                    $this->ajouterContacts();
+                $this->ajouterContacts();
             } else if (array_key_exists("parNom", $_POST)) {
                 $this->trierParNomAsc();
             } else if (array_key_exists("parPrenom", $_POST)) {
