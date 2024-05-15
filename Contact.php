@@ -4,7 +4,8 @@ class Contact
 {
     private $nom;
     public $prenom;
-    public $annee_naissance;
+
+
 
     /**
      * @param $nom
@@ -16,13 +17,19 @@ class Contact
         $this->prenom = $prenom;
     }
 
+    /**
+     * @return mixed
+     */
+    public function getPrenom()
+    {
+        return $this->prenom;
+    }
+
     public function getNom() {
         return $this->nom;
     }
     public function setNom($nom) {
         $this->nom = $nom;
     }
-    public function calculerAge() {
-        return 2024 - $this->annee_naissance;
-    }
+
 }
